@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { TodoForm } from './TodoForm'
 
 export const TodoWrapper = () => {
-  return (
+    const [todos, setTodos] = useState([])
+
+    return (
     <div className='TodoWrapper'>
-      <TodoForm />
+      <TodoForm addTodo={addTodo}/>
     </div>
   )
 }
